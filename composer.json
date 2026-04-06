@@ -8,8 +8,9 @@
     "require": {
         "php": "^8.3",
         "barryvdh/laravel-dompdf": "^3.1",
+        "laravel/fortify": "^1.36",
         "laravel/framework": "^13.0",
-        "laravel/sanctum": "^4.3",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^3.0",
         "razorpay/razorpay": "^2.9",
         "stripe/stripe-php": "^20.0"
