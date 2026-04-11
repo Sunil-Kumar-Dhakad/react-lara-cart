@@ -19,6 +19,9 @@ Route::prefix('auth')->group(function () {
     Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 });
 
+Route::apiResource('products', ProductController::class);
+//Route::get('/products', [ProductController::class, 'index']);
+
 // Protected Routes (Sanctum auth)
 Route::middleware('auth:sanctum')->group(function () {
 
@@ -38,7 +41,8 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     // Products
-    Route::apiResource('products', ProductController::class);
+    //Route::apiResource('products', ProductController::class);
+    //Route::get('/products', [ProductController::class, 'index']);
     Route::get('/products/category/{category}', [ProductController::class, 'byCategory']);
     Route::patch('/products/{product}/stock', [ProductController::class, 'updateStock']);
 
