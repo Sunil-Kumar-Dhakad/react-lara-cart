@@ -42,6 +42,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        // ── Admin panel guard (session-based, same users table, role check in middleware) ──
+        'admin' => [
+            'driver'   => 'session',
+            'provider' => 'users',        // uses users table
+        ],
+        'sanctum' => [
+            'driver'   => 'sanctum',
+            'provider' => 'users',
+        ],
     ],
 
     /*
